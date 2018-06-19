@@ -16,7 +16,8 @@ RESX_RESOURCE_STRING = \
 	../../../external/corefx/src/System.Linq.Expressions/src/Resources/Strings.resx \
 	../../../external/corefx/src/System.Linq/src/Resources/Strings.resx \
 	../../../external/corefx/src/System.Linq.Parallel/src/Resources/Strings.resx \
-	../../../external/corefx/src/System.Linq.Queryable/src/Resources/Strings.resx
+	../../../external/corefx/src/System.Linq.Queryable/src/Resources/Strings.resx	
+
 
 LIBRARY_WARN_AS_ERROR = yes
 

@@ -43,6 +43,8 @@ using System.Text;
 using System.Collections;
 using System.Runtime.Serialization;
 
+using Internal.Cryptography;
+
 namespace System.Security.Cryptography.X509Certificates {
 
 	[Serializable]
@@ -55,6 +57,7 @@ namespace System.Security.Cryptography.X509Certificates {
 				return impl2;
 			}
 		}
+		internal ICertificatePal Pal { get; private set; }
 
 		string friendlyName = string.Empty;
 
