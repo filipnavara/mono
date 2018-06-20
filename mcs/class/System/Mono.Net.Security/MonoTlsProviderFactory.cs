@@ -43,7 +43,7 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
 #if MONO_FEATURE_BTLS
-using Mono.Btls;
+//using Mono.Btls;
 #endif
 
 #if MONO_FEATURE_APPLETLS
@@ -99,7 +99,7 @@ namespace Mono.Net.Security
 				if (!providerCache.ContainsKey (provider.ID))
 					providerCache.Add (provider.ID, provider);
 
-				X509Helper2.Initialize ();
+				//X509Helper2.Initialize ();
 
 				defaultProvider = provider;
 				initialized = true;
@@ -114,7 +114,7 @@ namespace Mono.Net.Security
 
 				defaultProvider = LookupProvider (provider, true);
 
-				X509Helper2.Initialize ();
+				//X509Helper2.Initialize ();
 				initialized = true;
 			}
 		}
@@ -266,10 +266,10 @@ namespace Mono.Net.Security
 
 			Tuple<Guid,String> btlsEntry = null;
 #if MONO_FEATURE_BTLS
-			if (IsBtlsSupported ()) {
+			/*if (IsBtlsSupported ()) {
 				btlsEntry = new Tuple<Guid,String> (BtlsId, typeof (Mono.Btls.MonoBtlsProvider).FullName);
 				providerRegistration.Add ("btls", btlsEntry);
-			}
+			}*/
 #endif
 
 #if MONO_FEATURE_APPLETLS
@@ -330,8 +330,8 @@ namespace Mono.Net.Security
 					goto case "apple";
 #endif
 #if MONO_FEATURE_BTLS
-				if (IsBtlsSupported ())
-					goto case "btls";
+				//if (IsBtlsSupported ())
+				//	goto case "btls";
 #endif
 				goto case "legacy";
 #if MONO_FEATURE_APPLETLS
@@ -339,8 +339,8 @@ namespace Mono.Net.Security
 				return new AppleTlsProvider ();
 #endif
 #if MONO_FEATURE_BTLS
-			case "btls":
-				return new MonoBtlsProvider ();
+			//case "btls":
+			//	return new MonoBtlsProvider ();
 #endif
 			case "legacy":
 				return new Mono.Net.Security.LegacyTlsProvider ();

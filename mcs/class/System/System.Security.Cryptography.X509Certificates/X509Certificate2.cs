@@ -57,7 +57,7 @@ namespace System.Security.Cryptography.X509Certificates {
 				return impl2;
 			}
 		}
-		internal ICertificatePal Pal { get; private set; }
+		new internal ICertificatePal Pal { get; private set; }
 
 		string friendlyName = string.Empty;
 
@@ -122,6 +122,10 @@ namespace System.Security.Cryptography.X509Certificates {
 			throw new NotImplementedException ();
 		}
 
+        internal X509Certificate2(ICertificatePal pal)
+        {
+			throw new NotImplementedException ();
+        }
 		public X509Certificate2 (X509Certificate certificate) 
 			: base (X509Helper2.Import (certificate))
 		{

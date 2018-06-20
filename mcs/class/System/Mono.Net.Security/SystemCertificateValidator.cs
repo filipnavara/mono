@@ -63,7 +63,8 @@ namespace Mono.Net.Security
 		public static X509Chain CreateX509Chain (X509CertificateCollection certs)
 		{
 			var chain = new X509Chain ();
-			chain.ChainPolicy = new X509ChainPolicy ((X509CertificateCollection)(object)certs);
+			//chain.ChainPolicy = new X509ChainPolicy ((X509CertificateCollection)(object)certs);
+			chain.ChainPolicy = new X509ChainPolicy ();
 
 #if !MOBILE
 			chain.ChainPolicy.RevocationMode = revocation_mode;
@@ -354,11 +355,11 @@ namespace Mono.Net.Security
 				}
 
 				// last chance - try with older (deprecated) Netscape extensions
-				X509Extension ext = cert.Extensions ["2.16.840.1.113730.1.1"];
+				/*X509Extension ext = cert.Extensions ["2.16.840.1.113730.1.1"];
 				if (ext != null) {
 					string text = ext.NetscapeCertType (false);
 					return text.IndexOf ("SSL Server Authentication", StringComparison.Ordinal) != -1;
-				}
+				}*/
 				return true;
 			} catch (Exception e) {
 				Console.Error.WriteLine ("ERROR processing certificate: {0}", e);

@@ -2,7 +2,7 @@ Assembly/AssemblyInfo.cs
 ../../build/common/SR.cs
 corefx/*.cs
 
-Microsoft.Win32.SafeHandles/SafeX509ChainHandle.cs
+../../../external/corefx/src/System.Security.Cryptography.X509Certificates/src/Microsoft/Win32/SafeHandles/SafeX509ChainHandle.cs
 
 System/IOSelector.cs
 System/Platform.cs
@@ -147,48 +147,50 @@ System.Security.Authentication.ExtendedProtection.Configuration/ExtendedProtecti
 System.Security.Authentication.ExtendedProtection.Configuration/ServiceNameElement.cs
 System.Security.Authentication.ExtendedProtection.Configuration/ServiceNameElementCollection.cs
 
-System.Security.Cryptography/AsnEncodedData.cs
-System.Security.Cryptography/AsnEncodedDataCollection.cs
-System.Security.Cryptography/AsnEncodedDataEnumerator.cs
+../../../external/corefx/src/System.Security.Cryptography.Encoding/src/Internal/Cryptography/AsnFormatter.cs
+System.Security.Cryptography/AsnFormatter.Managed.cs
+../../../external/corefx/src/System.Security.Cryptography.Encoding/src/System/Security/Cryptography/AsnEncodedData.cs
+../../../external/corefx/src/System.Security.Cryptography.Encoding/src/System/Security/Cryptography/AsnEncodedDataCollection.cs
+../../../external/corefx/src/System.Security.Cryptography.Encoding/src/System/Security/Cryptography/AsnEncodedDataEnumerator.cs
+#System.Security.Cryptography/AsnEncodedData.cs
+#System.Security.Cryptography/AsnEncodedDataCollection.cs
+#System.Security.Cryptography/AsnEncodedDataEnumerator.cs
 
 ../../../external/corefx/src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/OpenFlags.cs
 System.Security.Cryptography.X509Certificates/OSX509Certificates.cs
-System.Security.Cryptography.X509Certificates/PublicKey.cs
+../../../external/corefx/src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/PublicKey.cs
 ../../../external/corefx/src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/StoreLocation.cs
 ../../../external/corefx/src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/StoreName.cs
-System.Security.Cryptography.X509Certificates/X500DistinguishedName.cs
+../../../external/corefx/src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/X500DistinguishedName.cs
 ../../../external/corefx/src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/X500DistinguishedNameFlags.cs
-System.Security.Cryptography.X509Certificates/X509BasicConstraintsExtension.cs
-System.Security.Cryptography.X509Certificates/X509Certificate2.cs
-System.Security.Cryptography.X509Certificates/X509Certificate2Collection.cs
-System.Security.Cryptography.X509Certificates/X509Certificate2Enumerator.cs
-System.Security.Cryptography.X509Certificates/X509Certificate2Impl.cs
-System.Security.Cryptography.X509Certificates/X509Certificate2ImplMono.cs
-System.Security.Cryptography.X509Certificates/X509CertificateCollection.cs
-System.Security.Cryptography.X509Certificates/X509CertificateImplCollection.cs
-System.Security.Cryptography.X509Certificates/X509Chain.cs
-System.Security.Cryptography.X509Certificates/X509ChainElement.cs
-System.Security.Cryptography.X509Certificates/X509ChainElementCollection.cs
-System.Security.Cryptography.X509Certificates/X509ChainElementEnumerator.cs
-System.Security.Cryptography.X509Certificates/X509ChainImpl.cs
-System.Security.Cryptography.X509Certificates/X509ChainImplMono.cs
-System.Security.Cryptography.X509Certificates/X509ChainPolicy.cs
-System.Security.Cryptography.X509Certificates/X509ChainStatus.cs
+../../../external/corefx/src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/X509BasicConstraintsExtension.cs
+../../../external/corefx/src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/X509Certificate2.cs
+../../../external/corefx/src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/X509Certificate2Collection.cs
+../../../external/corefx/src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/X509Certificate2Enumerator.cs
+../../../external/corefx/src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/X509CertificateCollection.cs
+../../../external/corefx/src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/X509CertificateEnumerator.cs
+# System.Security.Cryptography.X509Certificates/X509Certificate2Impl.cs
+# System.Security.Cryptography.X509Certificates/X509CertificateImplCollection.cs
+../../../external/corefx/src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/X509Chain.cs
+../../../external/corefx/src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/X509ChainElement.cs
+../../../external/corefx/src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/X509ChainElementCollection.cs
+../../../external/corefx/src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/X509ChainElementEnumerator.cs
+../../../external/corefx/src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/X509ChainPolicy.cs
+../../../external/corefx/src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/X509ChainStatus.cs
 ../../../external/corefx/src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/X509ChainStatusFlags.cs
-System.Security.Cryptography.X509Certificates/X509EnhancedKeyUsageExtension.cs
-System.Security.Cryptography.X509Certificates/X509Extension.cs
-System.Security.Cryptography.X509Certificates/X509ExtensionCollection.cs
-System.Security.Cryptography.X509Certificates/X509ExtensionEnumerator.cs
+../../../external/corefx/src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/X509EnhancedKeyUsageExtension.cs
+../../../external/corefx/src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/X509Extension.cs
+../../../external/corefx/src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/X509ExtensionCollection.cs
+../../../external/corefx/src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/X509ExtensionEnumerator.cs
 ../../../external/corefx/src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/X509FindType.cs
 ../../../external/corefx/src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/X509IncludeOption.cs
-System.Security.Cryptography.X509Certificates/X509Helper2.cs
-System.Security.Cryptography.X509Certificates/X509KeyUsageExtension.cs
+../../../external/corefx/src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/X509KeyUsageExtension.cs
 ../../../external/corefx/src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/X509KeyUsageFlags.cs
 ../../../external/corefx/src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/X509NameType.cs
 ../../../external/corefx/src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/X509RevocationFlag.cs
 ../../../external/corefx/src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/X509RevocationMode.cs
-System.Security.Cryptography.X509Certificates/X509Store.cs
-System.Security.Cryptography.X509Certificates/X509SubjectKeyIdentifierExtension.cs
+../../../external/corefx/src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/X509Store.cs
+../../../external/corefx/src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/X509SubjectKeyIdentifierExtension.cs
 ../../../external/corefx/src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/X509SubjectKeyIdentifierHashAlgorithm.cs
 ../../../external/corefx/src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/X509VerificationFlags.cs
 
@@ -199,44 +201,44 @@ System.Timers/ElapsedEventArgs.cs
 
 System.Windows.Input/ICommand.cs
 
-Mono.Btls/MonoBtlsBio.cs
-Mono.Btls/MonoBtlsContext.cs
-Mono.Btls/MonoBtlsError.cs
-Mono.Btls/MonoBtlsException.cs
-Mono.Btls/MonoBtlsKey.cs
-Mono.Btls/MonoBtlsObject.cs
-Mono.Btls/MonoBtlsPkcs12.cs
-Mono.Btls/MonoBtlsProvider.cs
-Mono.Btls/MonoBtlsSsl.cs
-Mono.Btls/MonoBtlsSslCtx.cs
-Mono.Btls/MonoBtlsSslError.cs
-Mono.Btls/MonoBtlsSslRenegotiateMode.cs
-Mono.Btls/MonoBtlsStream.cs
-Mono.Btls/MonoBtlsUtils.cs
-Mono.Btls/MonoBtlsX509.cs
-Mono.Btls/MonoBtlsX509Chain.cs
-Mono.Btls/MonoBtlsX509Crl.cs
-Mono.Btls/MonoBtlsX509Error.cs
-Mono.Btls/MonoBtlsX509Exception.cs
-Mono.Btls/MonoBtlsX509FileType.cs
-Mono.Btls/MonoBtlsX509Format.cs
-Mono.Btls/MonoBtlsX509Lookup.cs
-Mono.Btls/MonoBtlsX509LookupMonoCollection.cs
-Mono.Btls/MonoBtlsX509LookupMono.cs
-Mono.Btls/MonoBtlsX509LookupType.cs
-Mono.Btls/MonoBtlsX509Name.cs
-Mono.Btls/MonoBtlsX509NameEntryType.cs
-Mono.Btls/MonoBtlsX509Purpose.cs
-Mono.Btls/MonoBtlsX509Revoked.cs
-Mono.Btls/MonoBtlsX509Store.cs
-Mono.Btls/MonoBtlsX509StoreCtx.cs
-Mono.Btls/MonoBtlsX509StoreManager.cs
-Mono.Btls/MonoBtlsX509StoreType.cs
-Mono.Btls/MonoBtlsX509TrustKind.cs
-Mono.Btls/MonoBtlsX509VerifyFlags.cs
-Mono.Btls/MonoBtlsX509VerifyParam.cs
-Mono.Btls/X509CertificateImplBtls.cs
-Mono.Btls/X509ChainImplBtls.cs
+# Mono.Btls/MonoBtlsBio.cs
+# Mono.Btls/MonoBtlsContext.cs
+# Mono.Btls/MonoBtlsError.cs
+# Mono.Btls/MonoBtlsException.cs
+# Mono.Btls/MonoBtlsKey.cs
+# Mono.Btls/MonoBtlsObject.cs
+# Mono.Btls/MonoBtlsPkcs12.cs
+# Mono.Btls/MonoBtlsProvider.cs
+# Mono.Btls/MonoBtlsSsl.cs
+# Mono.Btls/MonoBtlsSslCtx.cs
+# Mono.Btls/MonoBtlsSslError.cs
+# Mono.Btls/MonoBtlsSslRenegotiateMode.cs
+# Mono.Btls/MonoBtlsStream.cs
+# Mono.Btls/MonoBtlsUtils.cs
+# Mono.Btls/MonoBtlsX509.cs
+# Mono.Btls/MonoBtlsX509Chain.cs
+# Mono.Btls/MonoBtlsX509Crl.cs
+# Mono.Btls/MonoBtlsX509Error.cs
+# Mono.Btls/MonoBtlsX509Exception.cs
+# Mono.Btls/MonoBtlsX509FileType.cs
+# Mono.Btls/MonoBtlsX509Format.cs
+# Mono.Btls/MonoBtlsX509Lookup.cs
+# Mono.Btls/MonoBtlsX509LookupMonoCollection.cs
+# Mono.Btls/MonoBtlsX509LookupMono.cs
+# Mono.Btls/MonoBtlsX509LookupType.cs
+# Mono.Btls/MonoBtlsX509Name.cs
+# Mono.Btls/MonoBtlsX509NameEntryType.cs
+# Mono.Btls/MonoBtlsX509Purpose.cs
+# Mono.Btls/MonoBtlsX509Revoked.cs
+# Mono.Btls/MonoBtlsX509Store.cs
+# Mono.Btls/MonoBtlsX509StoreCtx.cs
+# Mono.Btls/MonoBtlsX509StoreManager.cs
+# Mono.Btls/MonoBtlsX509StoreType.cs
+# Mono.Btls/MonoBtlsX509TrustKind.cs
+# Mono.Btls/MonoBtlsX509VerifyFlags.cs
+# Mono.Btls/MonoBtlsX509VerifyParam.cs
+# Mono.Btls/X509CertificateImplBtls.cs
+# Mono.Btls/X509ChainImplBtls.cs
 
 Mono.AppleTls/AppleCertificateHelper.cs
 Mono.AppleTls/AppleTlsContext.cs

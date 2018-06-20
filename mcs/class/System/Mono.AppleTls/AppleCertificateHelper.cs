@@ -99,7 +99,9 @@ namespace Mono.AppleTls
 		{
 			var identity = GetIdentity (certificate);
 
-			var impl2 = certificate.Impl as X509Certificate2Impl;
+			intermediateCerts = new SecCertificate [0];
+			return identity;
+			/*var impl2 = certificate.Impl as X509Certificate2Impl;
 			if (impl2 == null || impl2.IntermediateCertificates == null) {
 				intermediateCerts = new SecCertificate [0];
 				return identity;
@@ -114,7 +116,7 @@ namespace Mono.AppleTls
 			} catch {
 				identity.Dispose ();
 				throw;
-			}
+			}*/
 		}
 
 		public static bool InvokeSystemCertificateValidator (

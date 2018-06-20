@@ -51,6 +51,11 @@ namespace System.Security.Cryptography.X509Certificates {
 			info = String.Empty;
 		}
 
+		internal X509ChainElement (X509Certificate2 certificate, X509ChainStatus[] chainElementStatus, string information)
+		{
+			throw new NotImplementedException ();
+		}
+
 		// properties
 
 		public X509Certificate2 Certificate {

@@ -322,42 +322,48 @@ namespace Mono.Btls
 
 		public static X509Certificate CreateCertificate (byte[] data, MonoBtlsX509Format format, bool disallowFallback = false)
 		{
-			using (var impl = new X509CertificateImplBtls (data, format, disallowFallback)) {
+			throw new NotSupportedException ();
+			/*using (var impl = new X509CertificateImplBtls (data, format, disallowFallback)) {
 				return new X509Certificate (impl);
-			}
+			}*/
 		}
 
 		public static X509Certificate2 CreateCertificate2 (byte[] data, MonoBtlsX509Format format, bool disallowFallback = false)
 		{
-			using (var impl = new X509CertificateImplBtls (data, format, disallowFallback)) {
+			throw new NotSupportedException ();
+			/*using (var impl = new X509CertificateImplBtls (data, format, disallowFallback)) {
 				return new X509Certificate2 (impl);
-			}
+			}*/
 		}
 
 		public static X509Certificate2 CreateCertificate2 (byte[] data, string password, bool disallowFallback = false)
 		{
-			using (var impl = new X509CertificateImplBtls (disallowFallback)) {
+			throw new NotSupportedException ();
+			/*using (var impl = new X509CertificateImplBtls (disallowFallback)) {
 				impl.Import (data, password, X509KeyStorageFlags.DefaultKeySet);
 				return new X509Certificate2 (impl);
-			}
+			}*/
 		}
 
 		public static X509Certificate CreateCertificate (MonoBtlsX509 x509)
 		{
-			using (var impl = new X509CertificateImplBtls (x509, true))
-				return new X509Certificate (impl);
+			throw new NotSupportedException ();
+			/*using (var impl = new X509CertificateImplBtls (x509, true))
+				return new X509Certificate (impl);*/
 		}
 
 		public static X509Chain CreateChain ()
 		{
-			using (var impl = new X509ChainImplBtls ())
-				return new X509Chain (impl);
+			throw new NotSupportedException ();
+			/*using (var impl = new X509ChainImplBtls ())
+				return new X509Chain (impl);*/
 		}
 
 		public static X509Chain GetManagedChain (MonoBtlsX509Chain chain)
 		{
-			var impl = new X509ChainImplBtls (chain);
-			return new X509Chain (impl);
+			throw new NotSupportedException ();
+			/*var impl = new X509ChainImplBtls (chain);
+			return new X509Chain (impl);*/
 		}
 
 		public static MonoBtlsX509 GetBtlsCertificate (X509Certificate certificate)

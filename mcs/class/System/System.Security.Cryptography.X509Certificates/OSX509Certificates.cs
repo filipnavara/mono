@@ -95,13 +95,13 @@ namespace System.Security.Cryptography.X509Certificates {
 
 		static IntPtr GetCertificate (X509Certificate certificate)
 		{
-			var handle = certificate.Impl.GetNativeAppleCertificate ();
+			/*var handle = certificate.Impl.GetNativeAppleCertificate ();
 			if (handle != IntPtr.Zero) {
 				CFRetain (handle);
 				return handle;
-			}
+			}*/
 			var dataPtr = MakeCFData (certificate.GetRawCertData ());
-			handle = SecCertificateCreateWithData (IntPtr.Zero, dataPtr);
+			var handle = SecCertificateCreateWithData (IntPtr.Zero, dataPtr);
 			CFRelease (dataPtr);
 			return handle;
 		}

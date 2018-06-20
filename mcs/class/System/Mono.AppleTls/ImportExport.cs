@@ -34,11 +34,11 @@ using System.Security.Cryptography.X509Certificates;
 using ObjCRuntimeInternal;
 using Mono.Net;
 
-#if MONO_FEATURE_BTLS
-using Mono.Btls;
-#else
+//#if MONO_FEATURE_BTLS
+//using Mono.Btls;
+//#else
 using Mono.Security.Cryptography;
-#endif
+//#endif
 
 namespace Mono.AppleTls {
 
@@ -144,12 +144,7 @@ namespace Mono.AppleTls {
 
 		static byte[] ExportKey (RSA key)
 		{
-#if MONO_FEATURE_BTLS
-			using (var btlsKey = MonoBtlsKey.CreateFromRSAPrivateKey (key))
-				return btlsKey.GetBytes (true);
-#else
 			return PKCS8.PrivateKeyInfo.Encode (key);
-#endif
 		}
 
 		static SecKey ImportPrivateKey (X509Certificate2 certificate)

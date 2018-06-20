@@ -64,18 +64,18 @@ namespace Mono.AppleTls {
 			if (certificate == null)
 				throw new ArgumentNullException ("certificate");
 
-			handle = certificate.Impl.GetNativeAppleCertificate ();
+			/*handle = certificate.Impl.GetNativeAppleCertificate ();
 			if (handle != IntPtr.Zero) {
 				CFObject.CFRetain (handle);
 				return;
-			}
+			}*/
 
 			using (CFData cert = CFData.FromData (certificate.GetRawCertData ())) {
 				Initialize (cert);
 			}
 		}
 
-		internal SecCertificate (X509CertificateImpl impl)
+		/*internal SecCertificate (X509CertificateImpl impl)
 		{
 			handle = impl.GetNativeAppleCertificate ();
 			if (handle != IntPtr.Zero) {
@@ -86,7 +86,7 @@ namespace Mono.AppleTls {
 			using (CFData cert = CFData.FromData (impl.GetRawCertData ())) {
 				Initialize (cert);
 			}
-		}
+		}*/
 
 		void Initialize (CFData data)
 		{
