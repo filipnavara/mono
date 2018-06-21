@@ -58,10 +58,10 @@ namespace Internal.Cryptography
 
 		private static readonly Dictionary<string, string> s_extraFriendlyNameToOid =
 			new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase) {
-				{ "pkcs7-data", "1.2.840.113549.1.7.1" },
-				{ "contentType", "1.2.840.113549.1.9.3" },
-				{ "messageDigest", "1.2.840.113549.1.9.4" },
-				{ "signingTime", "1.2.840.113549.1.9.5" },
+				{ "PKCS 7 Data", "1.2.840.113549.1.7.1" },
+				{ "Content Type", "1.2.840.113549.1.9.3" },
+				{ "Message Digest", "1.2.840.113549.1.9.4" },
+				{ "Signing Time", "1.2.840.113549.1.9.5" },
 				{ "Subject Key Identifier", "2.5.29.14" },
 				{ "Key Usage", "2.5.29.15" },
 				{ "Subject Alternative Name", "2.5.29.17" },
