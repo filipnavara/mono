@@ -147,18 +147,28 @@ System.Security.Authentication.ExtendedProtection.Configuration/ExtendedProtecti
 System.Security.Authentication.ExtendedProtection.Configuration/ServiceNameElement.cs
 System.Security.Authentication.ExtendedProtection.Configuration/ServiceNameElementCollection.cs
 
-System.Security.Cryptography/AsnEncodedData.cs
-System.Security.Cryptography/AsnEncodedDataCollection.cs
-System.Security.Cryptography/AsnEncodedDataEnumerator.cs
+../../../external/corefx/src/Common/src/System/Security/Cryptography/DerEncoder.cs
+../../../external/corefx/src/Common/src/System/Security/Cryptography/DerSequenceReader.cs
+../../../external/corefx/src/System.Security.Cryptography.X509Certificates/src/Internal/Cryptography/Helpers.cs
+../../../external/corefx/src/System.Security.Cryptography.X509Certificates/src/Internal/Cryptography/Oids.cs
+../../../external/corefx/src/System.Security.Cryptography.X509Certificates/src/Internal/Cryptography/Pal.Unix/ManagedX509ExtensionProcessor.cs
+../../../external/corefx/src/System.Security.Cryptography.X509Certificates/src/Internal/Cryptography/Pal.Unix/X500NameEncoder.cs
+../../../external/corefx/src/System.Security.Cryptography.X509Certificates/src/Internal/Cryptography/Pal.Unix/X500NameEncoder.ManagedDecode.cs
+../../../external/corefx/src/System.Security.Cryptography.Encoding/src/Internal/Cryptography/AsnFormatter.cs
+../../../external/corefx/src/System.Security.Cryptography.Encoding/src/System/Security/Cryptography/AsnEncodedData.cs
+../../../external/corefx/src/System.Security.Cryptography.Encoding/src/System/Security/Cryptography/AsnEncodedDataCollection.cs
+../../../external/corefx/src/System.Security.Cryptography.Encoding/src/System/Security/Cryptography/AsnEncodedDataEnumerator.cs
+Internal.Cryptography/AsnFormatter.Managed.cs
+Internal.Cryptography/X509Pal.cs
 
 ../../../external/corefx/src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/OpenFlags.cs
 System.Security.Cryptography.X509Certificates/OSX509Certificates.cs
 System.Security.Cryptography.X509Certificates/PublicKey.cs
 ../../../external/corefx/src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/StoreLocation.cs
 ../../../external/corefx/src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/StoreName.cs
-System.Security.Cryptography.X509Certificates/X500DistinguishedName.cs
+../../../external/corefx/src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/X500DistinguishedName.cs
 ../../../external/corefx/src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/X500DistinguishedNameFlags.cs
-System.Security.Cryptography.X509Certificates/X509BasicConstraintsExtension.cs
+../../../external/corefx/src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/X509BasicConstraintsExtension.cs
 System.Security.Cryptography.X509Certificates/X509Certificate2.cs
 System.Security.Cryptography.X509Certificates/X509Certificate2Collection.cs
 System.Security.Cryptography.X509Certificates/X509Certificate2Enumerator.cs
@@ -175,20 +185,20 @@ System.Security.Cryptography.X509Certificates/X509ChainImplMono.cs
 System.Security.Cryptography.X509Certificates/X509ChainPolicy.cs
 System.Security.Cryptography.X509Certificates/X509ChainStatus.cs
 ../../../external/corefx/src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/X509ChainStatusFlags.cs
-System.Security.Cryptography.X509Certificates/X509EnhancedKeyUsageExtension.cs
-System.Security.Cryptography.X509Certificates/X509Extension.cs
-System.Security.Cryptography.X509Certificates/X509ExtensionCollection.cs
-System.Security.Cryptography.X509Certificates/X509ExtensionEnumerator.cs
+../../../external/corefx/src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/X509EnhancedKeyUsageExtension.cs
+../../../external/corefx/src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/X509Extension.cs
+../../../external/corefx/src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/X509ExtensionCollection.cs
+../../../external/corefx/src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/X509ExtensionEnumerator.cs
 ../../../external/corefx/src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/X509FindType.cs
 ../../../external/corefx/src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/X509IncludeOption.cs
 System.Security.Cryptography.X509Certificates/X509Helper2.cs
-System.Security.Cryptography.X509Certificates/X509KeyUsageExtension.cs
+../../../external/corefx/src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/X509KeyUsageExtension.cs
 ../../../external/corefx/src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/X509KeyUsageFlags.cs
 ../../../external/corefx/src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/X509NameType.cs
 ../../../external/corefx/src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/X509RevocationFlag.cs
 ../../../external/corefx/src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/X509RevocationMode.cs
 System.Security.Cryptography.X509Certificates/X509Store.cs
-System.Security.Cryptography.X509Certificates/X509SubjectKeyIdentifierExtension.cs
+../../../external/corefx/src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/X509SubjectKeyIdentifierExtension.cs
 ../../../external/corefx/src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/X509SubjectKeyIdentifierHashAlgorithm.cs
 ../../../external/corefx/src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/X509VerificationFlags.cs
 
@@ -258,7 +268,6 @@ MonoTouch/Dummy.cs
 
 ReferenceSources/AutoWebProxyScriptEngine.cs
 ReferenceSources/AssertWrapper.cs
-ReferenceSources/CAPI.cs
 ReferenceSources/EnvironmentHelpers.cs
 ReferenceSources/HttpApi.cs
 ReferenceSources/LocalAppContextSwitches.cs
@@ -768,9 +777,12 @@ ReferenceSources/Win32Exception.cs
 ../referencesource/System/security/system/security/Authentication/ExtendedProtection/TokenBinding.cs
 ../referencesource/System/security/system/security/Authentication/ExtendedProtection/ServiceNameCollection.cs
 
-../referencesource/System/security/system/security/cryptography/oid.cs
-
-../referencesource/System/security/system/security/cryptography/x509/x509utils.cs
+../../../external/corefx/src/System.Security.Cryptography.Encoding/src/System/Security/Cryptography/OidGroup.cs
+../../../external/corefx/src/System.Security.Cryptography.Encoding/src/System/Security/Cryptography/Oid.cs
+../../../external/corefx/src/System.Security.Cryptography.Encoding/src/System/Security/Cryptography/OidCollection.cs
+../../../external/corefx/src/System.Security.Cryptography.Encoding/src/System/Security/Cryptography/OidEnumerator.cs
+../../../external/corefx/src/System.Security.Cryptography.Encoding/src/Internal/Cryptography/OidLookup.cs
+Internal.Cryptography/OidLookup.Managed.cs
 
 ../referencesource/System/security/system/security/permissions/typedescriptorpermission.cs
 
