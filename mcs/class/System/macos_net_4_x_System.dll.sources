@@ -4,7 +4,7 @@
 System.Security.Cryptography/IncrementalHashExtensions.cs
 System.Security.Cryptography.X509Certificates/ICertificatePal.cs
 
-../../../external/corefx/src/System.Security.Cryptography.Encoding/src/Internal/Cryptography/OidLookup.OSX.cs
+# ../../../external/corefx/src/System.Security.Cryptography.Encoding/src/Internal/Cryptography/OidLookup.OSX.cs
 
 # ../../../external/corefx/src/System.Security.Cryptography.Encoding/src/System/Security/Cryptography/OidGroup.cs
 
