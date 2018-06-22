@@ -112,7 +112,7 @@ endif
 TXT_RESOURCE_STRINGS = ../referencesource/System/System.txt
 
 
-API_BIN_REFS := System.Net.Http System.Xml System.Core System.Numerics
+API_BIN_REFS := System.Net.Http System.Xml System.Numerics System.Core
 
 ifndef MOBILE_PROFILE
 API_BIN_REFS += System.Configuration

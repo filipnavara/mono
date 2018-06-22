@@ -36,8 +36,6 @@ System.Security.Cryptography.X509Certificates/ICertificatePal.cs
 ../../../external/corefx/src/Common/src/System/Net/ContextAwareResult.OSX.cs
 
 # ../../../external/corefx/src/Common/src/System/Security/Cryptography/DSASecurityTransforms.cs
-../../../external/corefx/src/Common/src/System/Security/Cryptography/DerEncoder.cs
-../../../external/corefx/src/Common/src/System/Security/Cryptography/DerSequenceReader.cs
 ../../../external/corefx/src/Common/src/System/Security/Cryptography/SecKeyPair.cs
 
 ../../../external/corefx/src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/X501Attribute.cs

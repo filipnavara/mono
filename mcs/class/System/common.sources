@@ -147,14 +147,19 @@ System.Security.Authentication.ExtendedProtection.Configuration/ExtendedProtecti
 System.Security.Authentication.ExtendedProtection.Configuration/ServiceNameElement.cs
 System.Security.Authentication.ExtendedProtection.Configuration/ServiceNameElementCollection.cs
 
+../../../external/corefx/src/Common/src/System/Security/Cryptography/DerEncoder.cs
+../../../external/corefx/src/Common/src/System/Security/Cryptography/DerSequenceReader.cs
+../../../external/corefx/src/System.Security.Cryptography.X509Certificates/src/Internal/Cryptography/Helpers.cs
+../../../external/corefx/src/System.Security.Cryptography.X509Certificates/src/Internal/Cryptography/Oids.cs
+../../../external/corefx/src/System.Security.Cryptography.X509Certificates/src/Internal/Cryptography/Pal.Unix/ManagedX509ExtensionProcessor.cs
+../../../external/corefx/src/System.Security.Cryptography.X509Certificates/src/Internal/Cryptography/Pal.Unix/X500NameEncoder.cs
+../../../external/corefx/src/System.Security.Cryptography.X509Certificates/src/Internal/Cryptography/Pal.Unix/X500NameEncoder.ManagedDecode.cs
 ../../../external/corefx/src/System.Security.Cryptography.Encoding/src/Internal/Cryptography/AsnFormatter.cs
-System.Security.Cryptography/AsnFormatter.Managed.cs
 ../../../external/corefx/src/System.Security.Cryptography.Encoding/src/System/Security/Cryptography/AsnEncodedData.cs
 ../../../external/corefx/src/System.Security.Cryptography.Encoding/src/System/Security/Cryptography/AsnEncodedDataCollection.cs
 ../../../external/corefx/src/System.Security.Cryptography.Encoding/src/System/Security/Cryptography/AsnEncodedDataEnumerator.cs
-#System.Security.Cryptography/AsnEncodedData.cs
-#System.Security.Cryptography/AsnEncodedDataCollection.cs
-#System.Security.Cryptography/AsnEncodedDataEnumerator.cs
+Internal.Cryptography/AsnFormatter.Managed.cs
+Internal.Cryptography/X509Pal.cs
 
 ../../../external/corefx/src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/OpenFlags.cs
 System.Security.Cryptography.X509Certificates/OSX509Certificates.cs
@@ -260,7 +265,6 @@ MonoTouch/Dummy.cs
 
 ReferenceSources/AutoWebProxyScriptEngine.cs
 ReferenceSources/AssertWrapper.cs
-ReferenceSources/CAPI.cs
 ReferenceSources/EnvironmentHelpers.cs
 ReferenceSources/HttpApi.cs
 ReferenceSources/LocalAppContextSwitches.cs
@@ -770,6 +774,7 @@ ReferenceSources/Win32Exception.cs
 ../referencesource/System/security/system/security/Authentication/ExtendedProtection/TokenBinding.cs
 ../referencesource/System/security/system/security/Authentication/ExtendedProtection/ServiceNameCollection.cs
 
+<<<<<<< HEAD
 # ../referencesource/System/security/system/security/cryptography/oid.cs
 ../../../external/corefx/src/System.Security.Cryptography.Encoding/src/System/Security/Cryptography/Oid.cs
 ../../../external/corefx/src/System.Security.Cryptography.Encoding/src/System/Security/Cryptography/OidEnumerator.cs
@@ -777,6 +782,14 @@ ReferenceSources/Win32Exception.cs
 ../../../external/corefx/src/System.Security.Cryptography.Encoding/src/Internal/Cryptography/OidLookup.cs
 
 # ../referencesource/System/security/system/security/cryptography/x509/x509utils.cs
+=======
+../../../external/corefx/src/System.Security.Cryptography.Encoding/src/System/Security/Cryptography/OidGroup.cs
+../../../external/corefx/src/System.Security.Cryptography.Encoding/src/System/Security/Cryptography/Oid.cs
+../../../external/corefx/src/System.Security.Cryptography.Encoding/src/System/Security/Cryptography/OidCollection.cs
+../../../external/corefx/src/System.Security.Cryptography.Encoding/src/System/Security/Cryptography/OidEnumerator.cs
+../../../external/corefx/src/System.Security.Cryptography.Encoding/src/Internal/Cryptography/OidLookup.cs
+Internal.Cryptography/OidLookup.Managed.cs
+>>>>>>> asn-corefx
 
 ../referencesource/System/security/system/security/permissions/typedescriptorpermission.cs
 
