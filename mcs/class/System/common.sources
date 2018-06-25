@@ -60,24 +60,35 @@ System.Net/RequestStream.cs
 System.Net/SocketPermissionAttribute.cs
 System.Net/SocketPermission.cs
 
-System.Net.Mail/AlternateView.cs
-System.Net.Mail/AlternateViewCollection.cs
-System.Net.Mail/Attachment.cs
-System.Net.Mail/AttachmentBase.cs
-System.Net.Mail/AttachmentCollection.cs
-System.Net.Mail/DeliveryNotificationOptions.cs
-System.Net.Mail/LinkedResource.cs
-System.Net.Mail/LinkedResourceCollection.cs
-System.Net.Mail/MailMessage.cs
-System.Net.Mail/MailPriority.cs
-System.Net.Mail/SendCompletedEventHandler.cs
-System.Net.Mail/SmtpAccess.cs
-System.Net.Mail/SmtpDeliveryFormat.cs
-System.Net.Mail/SmtpDeliveryMethod.cs
-System.Net.Mail/SmtpException.cs
-System.Net.Mail/SmtpFailedRecipientException.cs
-System.Net.Mail/SmtpFailedRecipientsException.cs
-System.Net.Mail/SmtpStatusCode.cs
+../../../external/corefx/src/System.Net.Mail/src/System/Net/Mail/AlternateView.cs
+../../../external/corefx/src/System.Net.Mail/src/System/Net/Mail/AlternateViewCollection.cs
+../../../external/corefx/src/System.Net.Mail/src/System/Net/Mail/Attachment.cs
+../../../external/corefx/src/System.Net.Mail/src/System/Net/Mail/AttachmentBase.cs
+../../../external/corefx/src/System.Net.Mail/src/System/Net/Mail/AttachmentCollection.cs
+../../../external/corefx/src/System.Net.Mail/src/System/Net/Mail/ISmtpAuthenticationModule.cs
+../../../external/corefx/src/System.Net.Mail/src/System/Net/Mail/LinkedResource.cs
+../../../external/corefx/src/System.Net.Mail/src/System/Net/Mail/LinkedResourceCollection.cs
+../../../external/corefx/src/System.Net.Mail/src/System/Net/Mail/MailMessage.cs
+../../../external/corefx/src/System.Net.Mail/src/System/Net/Mail/MailPriority.cs
+../../../external/corefx/src/System.Net.Mail/src/System/Net/Mail/MailWriter.cs
+../../../external/corefx/src/System.Net.Mail/src/System/Net/Mail/SmtpAuthenticationManager.cs
+../../../external/corefx/src/System.Net.Mail/src/System/Net/Mail/SmtpClient.cs
+../../../external/corefx/src/System.Net.Mail/src/System/Net/Mail/SmtpCommands.cs
+../../../external/corefx/src/System.Net.Mail/src/System/Net/Mail/SmtpConnection.cs
+../../../external/corefx/src/System.Net.Mail/src/System/Net/Mail/SmtpConnection.Auth.cs
+../../../external/corefx/src/System.Security.Permissions/src/System/Net/Mail/SmtpAccess.cs
+../../../external/corefx/src/System.Net.Mail/src/System/Net/Mail/SmtpException.cs
+../../../external/corefx/src/System.Net.Mail/src/System/Net/Mail/SmtpFailedRecipientException.cs
+../../../external/corefx/src/System.Net.Mail/src/System/Net/Mail/SmtpFailedRecipientsException.cs
+../../../external/corefx/src/System.Net.Mail/src/System/Net/Mail/SmtpLoginAuthenticationModule.cs
+# ../../../external/corefx/src/System.Net.Mail/src/System/Net/Mail/SmtpNegotiateAuthenticationModule.cs
+# ../../../external/corefx/src/System.Net.Mail/src/System/Net/Mail/SmtpNtlmAuthenticationModule.cs
+../../../external/corefx/src/System.Net.Mail/src/System/Net/Mail/SmtpReplyReader.cs
+../../../external/corefx/src/System.Net.Mail/src/System/Net/Mail/SmtpReplyReaderFactory.cs
+../../../external/corefx/src/System.Net.Mail/src/System/Net/Mail/SmtpStatusCode.cs
+../../../external/corefx/src/System.Net.Mail/src/System/Net/Mail/SmtpTransport.cs
+../../../external/corefx/src/System.Net.Mail/src/System/Net/BufferedReadStream.cs
+../../../external/corefx/src/System.Net.Mail/src/System/Net/DelegatedStream.cs
 
 System.Net.NetworkInformation/IcmpV4Statistics.cs
 System.Net.NetworkInformation/IcmpV6Statistics.cs

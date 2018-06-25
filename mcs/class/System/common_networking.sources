@@ -17,7 +17,7 @@ Mono.Net.Security/NoReflectionHelper.cs
 Mono.Net.Security/SystemCertificateValidator.cs
 
 System.Net/MacProxy.cs
-System.Net.Mail/SmtpClient.cs
+# System.Net.Mail/SmtpClient.cs
 System.Net.Security/SslStream.cs
 System.Net/AuthenticationManager.cs
 System.Net/ChunkedInputStream.cs
@@ -59,7 +59,7 @@ System.Net/WebRequestStream.cs
 System.Net/WebResponseStream.cs
 System.Net/MonoChunkStream.cs
 System.Net/WebReadStream.cs
-System.Net/BufferedReadStream.cs
+# System.Net/BufferedReadStream.cs
 System.Net/ContentDecodeStream.cs
 System.Net/FixedSizeReadStream.cs
 
