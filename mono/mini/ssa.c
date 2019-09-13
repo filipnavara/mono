@@ -437,10 +437,9 @@ mono_ssa_compute (MonoCompile *cfg)
 				break;
 			}
 
- 			if (var->inst_vtype->byref)
- 				ins->klass = mono_defaults.int_class;
- 			else
- 				ins->klass = var->klass;
+ 			ins->klass = var->klass;
+			// HACK: Propagate this information to keep `->byref` available to LLVM
+			ins->backend.spill_var = var;
 
 			ins->inst_phi_args = (int *)mono_mempool_alloc0 (cfg->mempool, sizeof (int) * (cfg->bblocks [idx]->in_count + 1));
 			ins->inst_phi_args [0] = cfg->bblocks [idx]->in_count;

@@ -8204,7 +8204,8 @@ emit_method_inner (EmitContext *ctx)
 			case OP_FPHI:
 			case OP_VPHI:
 			case OP_XPHI: {
-				LLVMTypeRef phi_type = llvm_type_to_stack_type (cfg, type_to_llvm_type (ctx, m_class_get_byval_arg (ins->klass)));
+				// HACK: ins->backend.spill_var points to the original var
+				LLVMTypeRef phi_type = llvm_type_to_stack_type (cfg, type_to_llvm_type (ctx, ins->backend.spill_var->inst_vtype));
 
 				if (!ctx_ok (ctx))
 					return;

@@ -642,8 +642,6 @@ mono_compile_create_var_for_vreg (MonoCompile *cfg, MonoType *type, int opcode, 
 	int num = cfg->num_varinfo;
 	gboolean regpair;
 
-	type = mini_get_underlying_type (type);
-
 	if ((num + 1) >= cfg->varinfo_count) {
 		int orig_count = cfg->varinfo_count;
 		cfg->varinfo_count = cfg->varinfo_count ? (cfg->varinfo_count * 2) : 32;
@@ -764,8 +762,6 @@ mono_compile_create_var (MonoCompile *cfg, MonoType *type, int opcode)
 		}
 	}
 #endif
-
-	type = mini_get_underlying_type (type);
 
 	if (mono_type_is_long (type))
 		dreg = mono_alloc_dreg (cfg, STACK_I8);
