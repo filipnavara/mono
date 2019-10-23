@@ -3524,6 +3524,62 @@ simd_type_to_add_op (int t)
 	}
 }
 
+static int
+simd_type_to_min_op (int t)
+{
+	if (t != MONO_TYPE_I2 && t != MONO_TYPE_U2) {
+		g_assert (mono_hwcap_x86_has_sse41); // FIXME: add fallback
+	}
+
+	switch (t) {
+	case MONO_TYPE_I1:
+		return OP_PMINB; // SSE 4.1
+	case MONO_TYPE_U1:
+		return OP_PMINB_UN; // SSE 4.1
+	case MONO_TYPE_I2:
+		return OP_PMINW;
+	case MONO_TYPE_U2:
+		return OP_PMINW_UN;
+	case MONO_TYPE_I4:
+		return OP_PMIND; // SSE 4.1
+	case MONO_TYPE_U4:
+		return OP_PMIND_UN; // SSE 4.1
+	// case MONO_TYPE_I8: // AVX
+	// case MONO_TYPE_U8:
+	default:
+		g_assert_not_reached ();
+		return -1;
+	}
+}
+
+static int
+simd_type_to_max_op (int t)
+{
+	if (t != MONO_TYPE_I2 && t != MONO_TYPE_U2) {
+		g_assert (mono_hwcap_x86_has_sse41); // FIXME: add fallback
+	}
+
+	switch (t) {
+	case MONO_TYPE_I1:
+		return OP_PMAXB; // SSE 4.1
+	case MONO_TYPE_U1:
+		return OP_PMAXB_UN; // SSE 4.1
+	case MONO_TYPE_I2:
+		return OP_PMAXW;
+	case MONO_TYPE_U2:
+		return OP_PMAXW_UN;
+	case MONO_TYPE_I4:
+		return OP_PMAXD; // SSE 4.1
+	case MONO_TYPE_U4:
+		return OP_PMAXD_UN; // SSE 4.1
+	// case MONO_TYPE_I8: // AVX
+	// case MONO_TYPE_U8:
+	default:
+		g_assert_not_reached ();
+		return -1;
+	}
+}
+
 static void
 emit_simd_comp_op (MonoCompile *cfg, MonoBasicBlock *bb, MonoInst *ins, int type, int dreg, int sreg1, int sreg2)
 {
@@ -3871,6 +3927,12 @@ mono_arch_lowering_pass (MonoCompile *cfg, MonoBasicBlock *bb)
 			case OP_IOR:
 				ins->opcode = OP_ORPD;
 				break;
+			case OP_IMIN:
+				ins->opcode = simd_type_to_min_op (ins->inst_c1);
+				break;
+			case OP_IMAX:
+				ins->opcode = simd_type_to_max_op (ins->inst_c1);
+				break;
 			case OP_FSUB:
 				ins->opcode = ins->inst_c1 == MONO_TYPE_R8 ? OP_SUBPD : OP_SUBPS;
 				break;
@@ -3883,6 +3945,12 @@ mono_arch_lowering_pass (MonoCompile *cfg, MonoBasicBlock *bb)
 			case OP_FMUL:
 				ins->opcode = ins->inst_c1 == MONO_TYPE_R8 ? OP_MULPD : OP_MULPS;
 				break;
+			case OP_FMIN:
+				ins->opcode = ins->inst_c1 == MONO_TYPE_R8 ? OP_MINPD : OP_MINPS;
+				break
+			case OP_FMAX:
+				ins->opcode = ins->inst_c1 == MONO_TYPE_R8 ? OP_MAXPD : OP_MAXPS;
+				break
 			default:
 				g_assert_not_reached();
 				break;
