@@ -52,6 +52,7 @@
 #include <mono/utils/mono-threads.h>
 #include <mono/utils/mono-threads-coop.h>
 #include <mono/utils/mono-logger-internals.h>
+#include <mono/utils/mono-time.h>
 #include "cominterop.h"
 #include <mono/utils/w32api.h>
 #include <mono/utils/unlocked.h>
@@ -6373,6 +6374,13 @@ mono_array_new_full_checked (MonoDomain *domain, MonoClass *array_class, uintptr
 	MonoArrayBounds *bounds;
 	MonoVTable *vtable;
 	int i;
+	static int debug_counter = 0;
+	gint64 start_time;
+
+	++debug_counter;
+	if (debug_counter % 5000 == 0) {
+		start_time =  mono_100ns_ticks ();
+	}
 
 	error_init (error);
 
@@ -6435,6 +6443,11 @@ mono_array_new_full_checked (MonoDomain *domain, MonoClass *array_class, uintptr
 		o = (MonoObject *)mono_gc_alloc_array (vtable, byte_len, len, bounds_size);
 	else
 		o = (MonoObject *)mono_gc_alloc_vector (vtable, byte_len, len);
+
+	if (debug_counter % 5000 == 0) {
+		gint64 end_time = mono_100ns_ticks ();
+		g_warning ("mono_array_new_full_checked took %" G_GINT64_FORMAT " usecs\n", (end_time - start_time) / 10);
+	}
 
 	if (G_UNLIKELY (!o)) {
 		mono_error_set_out_of_memory (error, "Could not allocate %zd bytes", (gsize) byte_len);

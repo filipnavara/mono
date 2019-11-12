@@ -6,6 +6,12 @@
     <TargetFramework>netcoreapp3.0</TargetFramework>
     <DebugType>full</DebugType>
     <EnableSourceControlManagerQueries>false</EnableSourceControlManagerQueries>
+    <Optimize>true</Optimize>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BenchmarkDotNet" Version="0.1*" />
+    <PackageReference Include="BenchmarkDotNet.Diagnostics.Windows" Version="0.1*" />
+  </ItemGroup>
 
 </Project>

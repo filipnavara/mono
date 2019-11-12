@@ -1,16 +1,21 @@
-﻿using System;
+﻿using BenchmarkDotNet.Attributes;
+using BenchmarkDotNet.Running;
+using System;
 
-namespace HelloWorld
+namespace BenchmarkApp
 {
     class Program
     {
-        static void Main(string[] args)
-        {
-            bool isMono = typeof(object).Assembly.GetType("Mono.RuntimeStructs") != null;
-            Console.WriteLine("Hello World " + (isMono ? "from Mono!" : "from CoreCLR!"));
-            Console.WriteLine(typeof(object).Assembly.FullName);
-            Console.WriteLine(System.Reflection.Assembly.GetEntryAssembly ());
-            Console.WriteLine(System.Runtime.InteropServices.RuntimeInformation.FrameworkDescription);
-        }
+        static void Main(string[] args) => BenchmarkRunner.Run<Perf_Array>();
+    }
+
+    [InProcess]
+    public class Perf_Array
+    {
+        [Benchmark]
+        public Array ArrayCreate1D() => Array.CreateInstance(typeof(int), 4096 * 4096);
+
+        [Benchmark]
+        public Array ArrayCreate2D() => Array.CreateInstance(typeof(int), 4096, 4096);
     }
 }

@@ -25,6 +25,7 @@
 #include <mono/utils/mono-error-internals.h>
 #include <mono/utils/mono-logger-internals.h>
 #include <mono/utils/mono-memory-model.h>
+#include <mono/utils/mono-time.h>
 #include <mono/utils/unlocked.h>
 #ifdef MONO_CLASS_DEF_PRIVATE
 /* Class initialization gets to see the fields of MonoClass */
@@ -916,8 +917,15 @@ mono_class_create_bounded_array (MonoClass *eclass, guint32 rank, gboolean bound
 	int nsize;
 	char *name;
 	MonoImageSet* image_set;
+	static int debug_counter = 0;
+	gint64 start_time;
 
 	g_assert (rank <= 255);
+
+	++debug_counter;
+	if (debug_counter % 5000 == 0) {
+		start_time =  mono_100ns_ticks ();
+	}
 
 	if (rank > 1)
 		/* bounded only matters for one-dimensional arrays */
@@ -951,7 +959,7 @@ mono_class_create_bounded_array (MonoClass *eclass, guint32 rank, gboolean bound
 			rootlist = (GSList *)g_hash_table_lookup (image_set->array_cache, eclass);
 			for (list = rootlist; list; list = list->next) {
 				k = (MonoClass *)list->data;
-				if ((m_class_get_rank (k) == rank) && (m_class_get_byval_arg (k)->type == (((rank > 1) || bounded) ? MONO_TYPE_ARRAY : MONO_TYPE_SZARRAY))) {
+				if (m_class_get_rank (k) == rank) {
 					cached = k;
 					break;
 				}
@@ -964,14 +972,23 @@ mono_class_create_bounded_array (MonoClass *eclass, guint32 rank, gboolean bound
 			rootlist = (GSList *)g_hash_table_lookup (image->array_cache, eclass);
 			for (list = rootlist; list; list = list->next) {
 				k = (MonoClass *)list->data;
-				if ((m_class_get_rank (k) == rank) && (m_class_get_byval_arg (k)->type == (((rank > 1) || bounded) ? MONO_TYPE_ARRAY : MONO_TYPE_SZARRAY))) {
+				if (m_class_get_rank (k) == rank) {
 					cached = k;
 					break;
 				}
 			}
+			if (debug_counter % 5000 == 0) {
+				g_hash_table_print_stats (image->array_cache);
+			}
 			mono_loader_unlock ();
 		}
 	}
+
+	if (debug_counter % 5000 == 0) {
+		gint64 end_time = mono_100ns_ticks ();
+		g_warning ("mono_class_create_bounded_array took %" G_GINT64_FORMAT " usecs, cached %d\n", (end_time - start_time) / 10, cached != NULL);
+	}
+
 	if (cached)
 		return cached;
 
